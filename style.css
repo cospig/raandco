@@ -88,6 +88,11 @@ header h2 {
     background-color: white;
 }
 
+#cart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 hr {
     padding: 5px;
 }
@@ -108,12 +113,12 @@ hr {
     padding: 10px 40px;
     text-align: left;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3fr;
 }
 
 .customer input {
     height: 30px;
-    outline: 2px solid rgb(231, 231, 231);
+    outline: 2px solid #A76D60;
 }
 
 
@@ -211,7 +216,7 @@ footer {
     background-color: rgba(0,0,0,0.5);
    }
 
-   .products button {
+   .products button, #checkout button {
        padding: 10px 20px;
        background-color: #A76D60;
        border-radius: 0;
@@ -232,3 +237,30 @@ footer {
     border: 0;
     
 }
+
+.remove {
+    display: none;
+}
+
+.sidenav button {
+    border: none;
+    background-color: white;
+    font-size: 100%;
+    font-family: 'Playfair Display', serif;
+    padding-left: 0;
+}
+
+.sidenav button:focus {
+    border: none;
+    background-color: white;
+    font-size: 100%;
+    font-family: 'Playfair Display', serif;
+    outline: none;
+    padding-left: 0;
+}
+
+#details {
+    padding: 10px 10px 30px 10px;
+    margin: 0 auto;
+}
+

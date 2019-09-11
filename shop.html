@@ -26,8 +26,9 @@
         <div class="sidenav">
             <h3>Filter<h3>
             <ul>
-                <li>Clothes</li>
-                <li>Bags</li>
+                <li><button id="btnClothes">Clothes</button></li>
+                <li><button id="btnBags">Bags</button></li>
+                <li><button id="clear">Reset Filters</button></li>
             </ul>
         </div>
         <div id="products">
@@ -58,5 +59,57 @@
     <footer>
         <p>Designed with &lt;3 since 2019.</p>
     </footer> 
+    <script>
+    
+       
+        const bag = document.querySelectorAll(".bag");
+        const clothes = document.querySelectorAll(".clothes");
+
+        const btnClothes = document.querySelector("#btnClothes");
+        const btnBags = document.querySelector("#btnBags");
+
+        btnClothes.addEventListener("click", function() {
+            clothes.forEach(function(clothes) {
+                clothes.classList.remove("remove");
+            }
+            
+        );
+
+        bag.forEach(function(bag) {
+                bag.classList.add("remove");
+            }
+        );
+        });
+
+        btnBags.addEventListener("click", function() {
+            clothes.forEach(function(clothes) {
+                clothes.classList.add("remove");
+            }
+            
+        );
+
+        bag.forEach(function(bag) {
+                bag.classList.remove("remove");
+            }
+        );
+        });
+
+        clear.addEventListener("click", function() {
+            clothes.forEach(function(clothes) {
+                clothes.classList.remove("remove");
+            }
+            
+        );
+
+        bag.forEach(function(bag) {
+                bag.classList.remove("remove");
+            }
+        );
+        });
+
+        
+
+    
+    </script>
 </body>
 
